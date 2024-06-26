@@ -51,7 +51,20 @@ body nav {
   font-family: "GeneralSans";
   font-weight: 500;
 }
-body .menu {
+body nav .logo {
+  max-width: 167px;
+  height: auto;
+}
+body nav .logo img {
+  width: 100%;
+  height: auto;
+}
+body nav .menu {
+  width: 100%;
+  height: auto;
+  max-width: 957px;
+}
+body nav .menu ul {
   width: 100%;
   height: auto;
   max-width: 584px;
@@ -59,7 +72,7 @@ body .menu {
   justify-content: space-between;
   align-items: center;
 }
-body .menu li {
+body nav .menu ul li {
   padding: 10px;
   cursor: pointer;
   font-size: 1rem;
@@ -67,10 +80,10 @@ body .menu li {
   font-weight: 500;
   color: #96A0B5;
 }
-body .menu .active-menu-item {
+body nav .menu ul .active-menu-item {
   color: #101010;
 }
-body .contact-menu-button {
+body nav .menu .contact-menu-button {
   width: auto;
   height: auto;
   padding: 13px 25px;
@@ -80,7 +93,101 @@ body .contact-menu-button {
   transition: all 0.3s ease-out;
   font-size: 1.25rem;
 }
-body .contact-menu-button:hover {
+body nav .menu .contact-menu-button:hover {
   background-color: #101010;
   color: #D9D9D9;
+}
+body nav .menu-handler {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 0;
+    background-color: black;
+  }
+  body .container {
+    background-color: white;
+  }
+  body nav {
+    margin: 0 auto;
+    max-width: 80vw;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+  body nav .logo {
+    order: 1;
+  }
+  body nav .logo img {
+    max-width: 110px;
+  }
+  body nav .menu {
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+  }
+  body nav .menu .menu-handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+  }
+  body nav .menu .menu-handler .menu-handle-bar {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #101010;
+    opacity: 0.7;
+  }
+  body nav .menu .menu-handler .menu-handle-bar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #101010;
+  }
+  body nav .menu .menu-handler .menu-handle-bar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #101010;
+  }
+  body nav .menu .navbar {
+    background-color: white;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3px;
+  }
+  body nav .menu .navbar ul {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  body nav .menu .navbar ul li {
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+  }
+  body nav .menu .navbar .contact-menu-button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
