@@ -1,0 +1,74 @@
+@import 'fonts';
+
+$lightBlack: #101010;
+$darkGrey: #96A0B5;
+$lightGrey: #D9D9D9;
+
+* {
+     box-sizing: border-box;
+}
+
+body {
+     padding-top: 61px;
+
+
+     .container {
+          width: 100%;
+          height: auto;
+          max-width: 1280px;
+     }
+
+     nav {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          font-family: $textFont;
+          font-weight: 500;
+     }
+
+     .menu {
+          width: 100%;
+          height: auto;
+          max-width: 584px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          li {
+               padding: 10px;
+               cursor: pointer;
+
+               font-size: 1rem;
+               line-height: 21.6px;
+               font-weight: 500;
+               color: $darkGrey;
+          }
+
+          
+               .active-menu-item {
+                    color: #101010;
+               }
+
+     }
+
+     .contact-menu-button {
+          width: auto;
+          height: auto;
+          padding: 13px 25px;
+          border: 1px solid #0c0a0a;
+          border-radius: 50px;
+          background-color: transparent;
+          transition: all 0.3s ease-out;
+
+          font-size: 1.25rem;
+
+          &:hover{
+               background-color: $lightBlack;
+               color: $lightGrey;
+          }
+     }
+
+}

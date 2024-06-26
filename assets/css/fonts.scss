@@ -1,0 +1,46 @@
+$textFont: 'GeneralSans';
+$titleFont: 'ClashDisplay';
+
+@font-face {
+     // fontGeneralSans
+     font-family: $textFont;
+     font-weight: 400;
+     font-style: normal;
+     src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Regular.otf) format('truetype');
+}
+
+@font-face {
+     // fontGeneralSans
+     font-family: $textFont;
+     font-weight: 500;
+     font-style: normal;
+     src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Medium.otf) format('truetype');
+}
+
+
+@font-face {
+     // fontGeneralSans
+     font-family: $textFont;
+     font-weight: 700;
+     font-style: normal;
+     src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Bold.otf) format('truetype');
+}
+
+@font-face {
+     // fontClashDisplay
+     font-family: $titleFont;
+     src: url(../fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Regular.otf);
+}
+
+@font-face {
+     // fontClashDisplay
+     font-family: $titleFont;
+     font-weight: 500;
+     src: url(../fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+     // fontClashDisplay
+     font-family: $titleFont;
+     font-weight: 700;
+     src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Bold.otf);
+}

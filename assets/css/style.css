@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "GeneralSans";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Regular.otf) format("truetype");
+}
+@font-face {
+  font-family: "GeneralSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Medium.otf) format("truetype");
+}
+@font-face {
+  font-family: "GeneralSans";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Bold.otf) format("truetype");
+}
+@font-face {
+  font-family: "ClashDisplay";
+  src: url(../fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Regular.otf);
+}
+@font-face {
+  font-family: "ClashDisplay";
+  font-weight: 500;
+  src: url(../fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+  font-family: "ClashDisplay";
+  font-weight: 700;
+  src: url(../fonts/GeneralSans/Fonts/OTF/GeneralSans-Bold.otf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 61px;
+}
+body .container {
+  width: 100%;
+  height: auto;
+  max-width: 1280px;
+}
+body nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "GeneralSans";
+  font-weight: 500;
+}
+body .menu {
+  width: 100%;
+  height: auto;
+  max-width: 584px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .menu li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 21.6px;
+  font-weight: 500;
+  color: #96A0B5;
+}
+body .menu .active-menu-item {
+  color: #101010;
+}
+body .contact-menu-button {
+  width: auto;
+  height: auto;
+  padding: 13px 25px;
+  border: 1px solid #0c0a0a;
+  border-radius: 50px;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+  font-size: 1.25rem;
+}
+body .contact-menu-button:hover {
+  background-color: #101010;
+  color: #D9D9D9;
+}/*# sourceMappingURL=style.css.map */
