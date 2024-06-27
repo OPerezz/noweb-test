@@ -42,6 +42,21 @@ body .container {
   height: auto;
   max-width: 1280px;
 }
+body .white-button {
+  width: auto;
+  height: auto;
+  padding: 13px 25px;
+  border: 1px solid #0C0A0A;
+  border-radius: 50px;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+  font-family: "GeneralSans";
+  font-size: 1.25rem;
+}
+body .white-button:hover {
+  background-color: #101010;
+  color: #D9D9D9;
+}
 body nav {
   width: 100%;
   height: auto;
@@ -83,7 +98,7 @@ body nav .menu ul li {
 body nav .menu ul .active-menu-item {
   color: #101010;
 }
-body nav .menu .contact-menu-button {
+body nav .menu .white-button {
   width: auto;
   height: auto;
   padding: 13px 25px;
@@ -93,7 +108,7 @@ body nav .menu .contact-menu-button {
   transition: all 0.3s ease-out;
   font-size: 1.25rem;
 }
-body nav .menu .contact-menu-button:hover {
+body nav .menu .white-button:hover {
   background-color: #101010;
   color: #D9D9D9;
 }
@@ -101,6 +116,8 @@ body nav .menu-handler {
   display: none;
 }
 body .hero {
+  width: 100%;
+  height: auto;
   margin-top: 79px;
 }
 body .hero .container {
@@ -230,7 +247,7 @@ body .about .block-about .content.left .blackdrop-about {
   flex-direction: column;
   justify-content: flex-end;
   padding: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 30%, rgb(12, 10, 10) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(12, 10, 10, 0.4) 15%, rgb(12, 10, 10) 100%);
 }
 body .about .block-about .content.right {
   justify-content: space-between;
@@ -260,7 +277,137 @@ body .about .block-about .content.right .info.down {
 body .about .block-about .content.right .info.down .box {
   background-color: #031356;
 }
+body .services {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+body .services .container h2 {
+  font-family: "ClashDisplay";
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 4.6rem;
+  text-align: left;
+}
+body .services .container .line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 40px 0;
+  background-color: #ADABAB;
+}
+body .services .container .box-services {
+  width: 100%;
+  height: auto;
+  max-width: 1100px;
+}
+body .services .container .box-services .item-service {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+body .services .container .box-services .item-service img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+body .services .container .box-services .item-service .info-service {
+  width: 100%;
+  max-width: 539px;
+  height: auto;
+}
+body .services .container .box-services .item-service .info-service h4 {
+  font-family: "ClashDisplay";
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 3rem;
+  color: #101010;
+}
+body .services .container .box-services .item-service .info-service p {
+  margin: 16px 0 30px;
+  font-family: "GeneralSans";
+  font-size: 1.25rem;
+  line-height: 1.88rem;
+  color: #96A0B5;
+}
+body .services .container .box-services .item-service .info-service .white-button svg path {
+  stroke: #0C0A0A;
+}
+body .services .container .box-services .item-service .info-service .white-button:hover svg path {
+  stroke: #ffffff;
+}
+body .services .container .box-services .item-service .info-service .white-button svg {
+  transition: all 0.3s ease-in;
+  margin-left: 10px;
+}
+body .services .container .box-services .item-service:not(:first-child) {
+  margin-top: 82px;
+}
 
+@media (max-width: 1200px) and (min-width: 900px) {
+  body .hero .container {
+    align-items: center;
+  }
+  body .hero .container h1 {
+    font-size: 4.2rem;
+    line-height: 5rem;
+    max-width: 540px;
+  }
+  body .hero .container .hero-content {
+    max-width: 370px;
+    margin-left: 20px;
+  }
+  body .hero .container .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+  }
+  body .hero .container .hero-content button {
+    margin: 50px 0 0;
+  }
+}
+@media (max-width: 1200px) {
+  body .container {
+    max-width: 1000px;
+  }
+  body .about h2 {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+  body .about h3 {
+    font-size: 3.1rem;
+    line-height: 4.1rem;
+  }
+  body .about .block-about .content h4 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+  body .about .block-about .content p {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+  body .services .container h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  body .services .container .box-services .item-service img {
+    max-width: 400px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body .services .container .box-services .item-service .info-service {
+    margin-left: 30px;
+  }
+  body .services .container .box-services .item-service .info-service h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  body .services .container .box-services .item-service .info-service p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+}
 @media (max-width: 900px) {
   body {
     padding: 0;
@@ -268,26 +415,10 @@ body .about .block-about .content.right .info.down .box {
   body .container {
     max-width: 700px;
   }
-  body .hero .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  body .hero .container h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-    text-align: left;
-  }
-  body .hero .container .hero-content {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  body .hero .container .hero-content button {
-    width: 300px;
-    margin-left: 0;
-    padding: 7px 100;
+  body .white-button {
+    font-size: 0.8rem;
+    padding: 7px 10px;
+    margin-top: 20px;
   }
   body nav {
     margin: 0 auto;
@@ -365,10 +496,21 @@ body .about .block-about .content.right .info.down .box {
     padding: 10px 0;
     text-align: left;
   }
-  body nav .menu .navbar .contact-menu-button {
-    font-size: 0.8rem;
-    padding: 5px 10px;
-    margin-top: 20px;
+  body .hero .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .hero .container h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: left;
+  }
+  body .hero .container .hero-content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   body .about .container h2 {
     font-size: 1.1rem;
@@ -393,11 +535,8 @@ body .about .block-about .content.right .info.down .box {
     font-size: 0.8rem;
     line-height: 1rem;
   }
-  body .about .container .block-about .content.left .blackdrop-about {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgb(12, 10, 10) 100%);
-  }
   body .about .container .block-about .content.right {
-    margin-top: 30px;
+    margin-top: 10px;
     height: 230px;
   }
   body .about .container .block-about .content.right .info {
@@ -411,11 +550,32 @@ body .about .block-about .content.right .info.down .box {
     padding: 10px;
     justify-content: center;
   }
+  body .about .container .block-about .content.right .info.down {
+    margin-top: 10px;
+  }
   body .about .container .block-about .content.right .info.down .box {
     align-items: flex-end;
   }
   body .about .container .block-about .content.right .info.down .box h4,
   body .about .container .block-about .content.right .info.down .box p {
     text-align: right;
+  }
+  body .services .container .box-services .item-service {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .services .container .box-services .item-service img {
+    max-width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .services .container .box-services .item-service .info-service {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  body .services .container .box-services .item-service .info-service .white-button {
+    margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
