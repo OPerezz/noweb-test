@@ -1,8 +1,10 @@
 @import 'fonts';
 
-$lightBlack: #101010;
-$darkGrey: #96A0B5;
-$lightGrey: #D9D9D9;
+$white: #ffffff;
+$componentBlack: #0C0A0A;
+$textBlack: #101010;
+$textDarkGrey: #96A0B5;
+$textLightGrey: #D9D9D9;
 
 * {
      box-sizing: border-box;
@@ -58,7 +60,7 @@ body {
                          font-size: 1rem;
                          line-height: 21.6px;
                          font-weight: 500;
-                         color: $darkGrey;
+                         color: $textDarkGrey;
                     }
 
                     .active-menu-item {
@@ -71,7 +73,7 @@ body {
                     width: auto;
                     height: auto;
                     padding: 13px 25px;
-                    border: 1px solid #0c0a0a;
+                    border: 1px solid $componentBlack;
                     border-radius: 50px;
                     background-color: transparent;
                     transition: all 0.3s ease-out;
@@ -79,8 +81,8 @@ body {
                     font-size: 1.25rem;
 
                     &:hover {
-                         background-color: $lightBlack;
-                         color: $lightGrey;
+                         background-color: $textBlack;
+                         color: $textLightGrey;
                     }
                }
           }
@@ -89,15 +91,240 @@ body {
                display: none;
           }
      }
+
+     .hero {
+          margin-top: 79px;
+
+          .container {
+               display: flex;
+               justify-content: space-between;
+          }
+
+          h1 {
+               width: 100%;
+               height: auto;
+               max-width: 700px;
+               font-family: $titleFont;
+               font-weight: 500;
+               font-size: 5rem;
+               line-height: 6.16rem;
+               color: $textBlack;
+          }
+
+          .hero-content {
+               width: 100%;
+               height: auto;
+               max-width: 435px;
+               font-family: $textFont;
+
+               p {
+                    color: $textDarkGrey;
+                    font-weight: 400;
+                    font-size: 1.25rem;
+                    line-height: 1.88rem;
+               }
+
+               button {
+                    margin: 53px 0 0 9px;
+                    padding: 13px 25px;
+                    border: 1px solid $componentBlack;
+                    border-radius: 50px;
+                    background-color: $componentBlack;
+                    color: $white;
+
+                    transition: all 0.3s ease-in;
+
+                    &:hover {
+                         background-color: $white;
+                         color: $textBlack;
+
+                         svg path {
+                              stroke: $componentBlack;
+                         }
+                    }
+
+                    svg {
+
+                         transition: all 0.3s ease-in;
+
+                         margin-left: 10px;
+                    }
+               }
+          }
+
+          .slider-hero {
+               width: 100%;
+               height: 583px;
+               overflow-y: hidden;
+               margin-top: 40px;
+
+               .carousel {
+                    .carousel-inner {
+                         .carousel-item {
+                              max-width: 60%;
+
+                              img {
+                                   object-fit: contain;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     .about {
+          width: 100%;
+          height: 100%;
+          margin-top: 100px;
+
+          h2 {
+               font-family: $textFont;
+               font-size: 1.5rem;
+               font-weight: 600;
+               text-align: center;
+               line-height: 2.03rem;
+               color: $textDarkGrey;
+          }
+
+          h3 {
+
+               font-family: $titleFont;
+               font-size: 3.75rem;
+               font-weight: 500;
+               line-height: 4.61rem;
+               text-align: center;
+          }
+
+          .block-about {
+               width: 100%;
+               height: auto;
+               display: flex;
+               justify-content: space-between;
+               margin-top: 55px;
+
+               .content {
+                    width: 632px;
+                    height: 500px;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    h4 {
+
+                         width: 100%;
+                         height: auto;
+                         max-width: 451px;
+                         font-family: $titleFont;
+                         font-size: 1.5rem;
+                         font-weight: 500;
+                         line-height: 1.85rem;
+                         color: $white;
+                    }
+
+                    p {
+                         width: 100%;
+                         height: auto;
+                         max-width: 451px;
+                         font-family: $textFont;
+                         font-size: 1rem;
+                         font-weight: 400;
+                         line-height: 1.5rem;
+                         color: $textLightGrey;
+
+                    }
+
+                    &.left {
+                         justify-content: flex-end;
+                         margin-right: 16px;
+                         background-image: url(/assets/img/about1.webp);
+                         background-position: center;
+                         background-repeat: no-repeat;
+                         background-size: cover;
+
+                         .blackdrop-about {
+                              width: 100%;
+                              height: 48%;
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: flex-end;
+                              padding: 24px;
+                              background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 30%, rgba(12, 10, 10, 1) 100%);
+                         }
+                    }
+
+                    &.right {
+                         justify-content: space-between;
+
+                         .info {
+                              width: 100%;
+                              height: 242px;
+                              display: flex;
+
+                              img {
+                                   width: 100%;
+                                   max-width: 230px;
+                                   height: auto;
+                              }
+
+                              .box {
+                                   display: flex;
+                                   flex-direction: column;
+                                   justify-content: flex-end;
+                                   padding: 24px;
+                              }
+
+                              &.up .box {
+                                   background-color: #01737F;
+                              }
+
+                              &.down {
+                                   flex-direction: row-reverse;
+
+                                   .box {
+                                        background-color: #031356;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
 }
 
 @media (max-width:900px) {
      body {
           padding: 0;
-          background-color: black;
 
           .container {
-               background-color: white;
+               max-width: 700px;
+          }
+
+          .hero {
+               .container {
+                    flex-direction: column;
+                    align-items: center;
+
+                    h1 {
+                         font-size: 3rem;
+                         line-height: 3rem;
+                         text-align: left;
+                    }
+
+                    .hero-content {
+                         margin-top: 30px;
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+
+                         button {
+                              width: 300px;
+                              margin-left: 0;
+                              padding: 7px 100;
+
+                         }
+                    }
+               }
           }
 
           nav {
@@ -139,7 +366,7 @@ body {
                               height: 3px;
                               border-radius: 3px;
 
-                              background-color: $lightBlack;
+                              background-color: $textBlack;
                               opacity: 0.7;
 
                               &::before {
@@ -151,7 +378,7 @@ body {
                                    width: 100%;
                                    height: 3px;
                                    border-radius: 3px;
-                                   background-color: $lightBlack;
+                                   background-color: $textBlack;
                               }
 
                               &::after {
@@ -163,13 +390,13 @@ body {
                                    width: 100%;
                                    height: 3px;
                                    border-radius: 3px;
-                                   background-color: $lightBlack;
+                                   background-color: $textBlack;
                               }
                          }
                     }
 
                     .navbar {
-                         background-color: white;
+                         background-color: $white;
                          top: 100%;
                          left: 0;
                          display: flex;
@@ -192,6 +419,73 @@ body {
                               font-size: 0.8rem;
                               padding: 5px 10px;
                               margin-top: 20px;
+                         }
+                    }
+               }
+          }
+
+          .about {
+               .container {
+                    h2{
+                         font-size: 1.1rem;
+                    }
+
+                    h3 {
+                         margin-top: 15px;
+                         font-size: 2.25rem;
+                         line-height: 2.5rem;
+                    }
+
+                    .block-about {
+                         flex-direction: column;
+
+                         .content {
+                              width: 100%;
+                              height: 300px;
+
+                              h4 {
+                                   font-size: 1rem;
+                                   line-height: 1.2rem;
+                              }
+
+                              p {
+                                   font-size: 0.8rem;
+                                   line-height: 1rem;
+                              }
+
+                              &.left {
+                                   .blackdrop-about {
+                                        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(12, 10, 10, 1) 100%);
+                                   }
+                              }
+
+                              &.right {
+                                   margin-top: 30px;
+                                   height: 230px;
+
+                                   .info {
+                                        height: auto;
+
+                                        img {
+                                             max-width: 100px;
+                                        }
+
+                                        .box {
+                                             width: 100%;
+                                             padding: 10px;
+                                             justify-content: center;
+                                        }
+
+                                        &.down .box {
+                                             align-items: flex-end;
+
+                                             h4,
+                                             p {
+                                                  text-align: right;
+                                             }
+                                        }
+                                   }
+                              }
                          }
                     }
                }
