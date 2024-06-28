@@ -10,7 +10,6 @@ App.Main = {
           this.menuHandler = document.getElementById('menu-handler')
           this.navBar = document.getElementById('navbar')
           this.linksMenu = navbar.querySelectorAll('.menu-item');
-
      },
 
 
@@ -22,7 +21,6 @@ App.Main = {
                     const linkElement = item.getAttribute('data-link')
                     App.Main.Events.scrollLinkMenu(linkElement);
                })
-
           });
      },
 
@@ -40,21 +38,17 @@ App.Main = {
                     behavior: 'smooth'
                });
 
-
                if (App.Main.menuHandler.classList.contains('menu-active')) {
                     App.Main.menuHandler.classList.toggle('menu-active')
                     App.Main.navBar.classList.toggle('menu-active');
                }
-
           },
 
           toggleMenuHandler: function () {
                App.Main.menuHandler.classList.toggle('menu-active')
                App.Main.navBar.classList.toggle('menu-active');
-
           }
      },
-
 }
 
 window.addEventListener('load', () => {

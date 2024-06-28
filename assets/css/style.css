@@ -77,6 +77,7 @@ body .button-component {
   font-size: 1.25rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 body .button-component.white {
   border: 1px solid #0C0A0A;
@@ -251,6 +252,7 @@ body .hero .slick-arrow {
   width: 48px;
   height: 48px;
   border-radius: 100%;
+  cursor: pointer;
 }
 body .hero .slick-next {
   left: 60%;
@@ -460,6 +462,7 @@ body .news .inner .content .header-news .content-arrow-news .slick-arrow {
   width: 48px;
   height: 48px;
   border-radius: 100%;
+  cursor: pointer;
 }
 body .news .inner .content .header-news .content-arrow-news .arrow-carousel-news {
   background-color: rgba(255, 255, 255, 0.2);
@@ -681,6 +684,7 @@ body footer .inner .inst .business-info h5 {
   line-height: 2rem;
   color: #ffffff;
   margin-bottom: 21px;
+  cursor: default;
 }
 body footer .inner .inst .business-info p {
   font-family: "ClashDisplay";
